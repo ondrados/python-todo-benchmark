@@ -1,0 +1,46 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+POST http://127.0.0.1:8000/todos
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "test title2",
+  "description": "some description2",
+  "done": false
+}
+
+### Todo list
+
+GET http://127.0.0.1:8000/todos?skip=0&limit=10
+Accept: application/json
+Content-Type: application/json
+
+### Todo detail
+
+GET http://127.0.0.1:8000/todos/10
+Accept: application/json
+Content-Type: application/json
+
+
+### Todo update
+
+PUT http://127.0.0.1:8000/todos/25
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "title updated3"
+}
+
+
+### Todo delete
+
+DELETE http://127.0.0.1:8000/todos/23
+Accept: application/json
+Content-Type: application/json
